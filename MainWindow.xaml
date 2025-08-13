@@ -1,0 +1,23 @@
+<Window x:Class="EjerciciosWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="30 Ejercicios - Menú (WPF)" Height="720" Width="1120" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#111827">
+            <DockPanel Margin="10">
+                <TextBlock Text="Menú de ejercicios" Foreground="White" FontSize="20" Margin="10" />
+                <ListBox x:Name="MenuList" DockPanel.Dock="Bottom" Margin="0,50,0,0"
+                         SelectionChanged="MenuList_SelectionChanged">
+                    <!-- We will fill items in code-behind -->
+                </ListBox>
+            </DockPanel>
+        </Border>
+
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
